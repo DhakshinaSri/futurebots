@@ -14,7 +14,7 @@ export default function Navbar() {
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Contact", path: "/contact" },
-];
+  ];
 
   const toggleDropdown = (name) => {
     setOpenDropdown((prev) => (prev === name ? null : name));
@@ -31,7 +31,6 @@ export default function Navbar() {
     };
 
     if (!isOpen) {
-      
       document.addEventListener("mousedown", handleClickOutside);
     }
 
@@ -43,18 +42,18 @@ export default function Navbar() {
   return (
     <nav className="bg-white fixed w-full top-0 left-0 z-50 shadow-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 md:h-18 items-center">
+        <div className="flex justify-between h-16 lg:h-18 items-center">
           {/* Logo */}
-          <div className="cursor-pointer">
+          <div className="cursor-pointer shrink-0">
             <Link to="/">
-              <img src={logo} alt="Company Logo" className="h-3 md:h-5 w-auto" />
+              <img src={logo} alt="Company Logo" className="h-12 lg:h-10 w-auto" />
             </Link>
           </div>
 
-          {/* Desktop Menu */}
+          {/* Desktop Menu - Modified to trigger only at lg screens (1024px+) */}
           <div
             ref={dropdownRef}
-            className="hidden md:flex space-x-15 relative"
+            className="hidden lg:flex space-x-6 xl:space-x-8 relative items-center"
           >
             {menus.map((item, index) => {
               const isActive = location.pathname === item.path;
@@ -65,10 +64,10 @@ export default function Navbar() {
                   {hasSubmenu ? (
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className={`text-[18px] font-montserrat font-medium flex items-center gap-1 transition ${
+                      className={`text-[14px] font-montserrat font-medium flex items-center gap-1 transition ${
                         openDropdown === item.name
-                          ? "text-[#348CD7]"
-                          : "text-black hover:text-[#348CD7]"
+                          ? "text-[#081F5C]"
+                          : "text-black hover:text-[#081F5C]"
                       }`}
                     >
                       {item.name}
@@ -81,10 +80,10 @@ export default function Navbar() {
                   ) : (
                     <Link
                       to={item.path}
-                      className={`text-[18px] font-montserrat font-medium pb-1 transition ${
+                      className={`text-[14px] font-montserrat font-medium pb-1 whitespace-nowrap transition ${
                         isActive
-                          ? "border-b-4 border-[#348CD7] text-[#348CD7]"
-                          : "text-black hover:text-[#348CD7]"
+                          ? "border-b-4 border-[#081F5C] text-[#081F5C]"
+                          : "text-black hover:text-[#081F5C]"
                       }`}
                     >
                       {item.name}
@@ -94,7 +93,7 @@ export default function Navbar() {
                   {/* Dropdown Menu */}
                   {hasSubmenu && openDropdown === item.name && (
                     <div className="absolute left-0 top-full mt-3 w-72 bg-white shadow-xl border border-gray-100 rounded-lg py-3 z-40">
-                      <h4 className="text-[#348CD7] font-semibold text-[16px] px-4 pb-2">
+                      <h4 className="text-[#081F5C] font-semibold text-[16px] px-4 pb-2">
                         {item.name}
                       </h4>
                       <div className="flex flex-col space-y-2 px-4">
@@ -103,7 +102,7 @@ export default function Navbar() {
                             key={i}
                             to={sub.path}
                             onClick={() => setOpenDropdown(null)}
-                            className="text-[20px] mt-3 text-gray-800 font-medium hover:text-[#348CD7] transition"
+                            className="text-[14px] mt-3 text-gray-800 font-medium hover:text-[#081F5C] transition"
                           >
                             {sub.name}
                           </Link>
@@ -116,11 +115,11 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <div className="md:hidden">
+          {/* Mobile/Medium Menu Toggle - Shows up on everything below lg */}
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className=" text-[#348CD7] p-1 px-3 rounded-md"
+              className="text-[#081F5C] p-1 px-3 rounded-md focus:outline-none"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -130,9 +129,9 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 bg-white flex flex-col items-center justify-center space-y-8 z-50">
+        <div className="fixed inset-0 bg-white flex flex-col items-center justify-center space-y-6 z-50 overflow-y-auto py-12">
           <button
-            className="absolute top-6 right-4 text-[#348CD7] p-2 px-4 rounded-md"
+            className="absolute top-6 right-4 text-[#081F5C] p-2 px-4 rounded-md"
             onClick={() => setIsOpen(false)}
           >
             <X size={32} />
@@ -151,10 +150,10 @@ export default function Navbar() {
                       onClick={() =>
                         setOpenDropdown(isDropdownOpen ? null : item.name)
                       }
-                      className={`text-[18px] font-montserrat font-medium flex items-center gap-2 ${
+                      className={`text-[15px] font-montserrat font-medium flex items-center gap-2 ${
                         isActive || isDropdownOpen
-                          ? "text-[#348CD7]"
-                          : "text-black hover:text-[#348CD7]"
+                          ? "text-[#081F5C]"
+                          : "text-black hover:text-[#081F5C]"
                       }`}
                     >
                       {item.name}
@@ -166,12 +165,12 @@ export default function Navbar() {
                     </button>
 
                     {isDropdownOpen && (
-                      <div className="flex flex-col mt-6 text-center space-y-6">
+                      <div className="flex flex-col mt-4 text-center space-y-4">
                         {item.subMenu.map((sub, i) => (
                           <Link
                             key={i}
                             to={sub.path}
-                            className="text-[18px] font-medium text-gray-800 hover:text-[#348CD7]"
+                            className="text-[14px] font-medium text-gray-800 hover:text-[#081F5C]"
                             onClick={() => {
                               setIsOpen(false);
                               setOpenDropdown(null);
@@ -186,10 +185,10 @@ export default function Navbar() {
                 ) : (
                   <Link
                     to={item.path}
-                    className={`text-[18px] font-montserrat font-medium ${
+                    className={`text-[15px] font-montserrat font-medium ${
                       isActive
-                        ? "text-[#348CD7] border-b-4 border-[#348CD7]"
-                        : "text-black hover:text-[#348CD7]"
+                        ? "text-[#081F5C] border-b-2 border-[#081F5C]"
+                        : "text-black hover:text-[#081F5C]"
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
