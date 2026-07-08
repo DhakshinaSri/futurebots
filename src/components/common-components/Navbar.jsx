@@ -46,7 +46,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="cursor-pointer shrink-0">
             <Link to="/">
-              <img src={logo} alt="Company Logo" className="h-12 lg:h-10 w-auto" />
+              <img src={logo} alt="Company Logo" className="h-5 lg:h-5 w-auto" />
             </Link>
           </div>
 

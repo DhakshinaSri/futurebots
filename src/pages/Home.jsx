@@ -1,7 +1,11 @@
+import FutureBotsHome from "@/components/home-components/FutureBotsHome";
+import IntroSection from "@/components/home-components/IntroSection";
+
 export default function Home() {
   return (
-    <div className="pt-20">
-        <h1 className="text-4xl font-bold mb-4 text-center">Welcome to FutureBots</h1>
+    <div className="pt-16">
+      <FutureBotsHome />
+      <IntroSection />
     </div>
   );
 }
