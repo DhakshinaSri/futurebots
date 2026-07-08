@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 export default function FutureBotsHome() {
@@ -113,25 +114,29 @@ export default function FutureBotsHome() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 pt-4"
           >
-            {/* Primary Action Button */}
-            <motion.button
-              whileHover={{ scale: 1.03, boxShadow: "0 20px 30px -10px rgba(51,78,172,0.4)" }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 rounded-xl font-bold text-white tracking-wide transition-colors"
-              style={{ backgroundColor: colors.c05 }}
-            >
-              Schedule a Consultation
-            </motion.button>
+            {/* Primary Action Button (Navigates to Contact) */}
+            <Link to="/contact">
+              <motion.button
+                whileHover={{ scale: 1.03, boxShadow: "0 20px 30px -10px rgba(51,78,172,0.4)" }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-white tracking-wide transition-colors"
+                style={{ backgroundColor: colors.c05 }}
+              >
+                Schedule a Consultation
+              </motion.button>
+            </Link>
 
-            {/* Secondary Action Button */}
-            <motion.button
-              whileHover={{ scale: 1.03, backgroundColor: colors.c02, color: '#ffffff' }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 rounded-xl font-bold border-2 transition-all tracking-wide bg-white/40 backdrop-blur-md"
-              style={{ color: colors.c02, borderColor: colors.c02 }}
-            >
-              Explore Our Services
-            </motion.button>
+            {/* Secondary Action Button (Navigates to Services) */}
+            <Link to="/services">
+              <motion.button
+                whileHover={{ scale: 1.03, backgroundColor: colors.c02, color: '#ffffff' }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold border-2 transition-all tracking-wide bg-white/40 backdrop-blur-md"
+                style={{ color: colors.c02, borderColor: colors.c02 }}
+              >
+                Explore Our Services
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
 
@@ -172,9 +177,6 @@ export default function FutureBotsHome() {
             style={{ borderColor: `${colors.c01}30` }}
           >
             <div className="space-y-6">
-              <h3 className="text-xs font-bold tracking-widest uppercase opacity-60" style={{ color: colors.c02 }}>
-                Philosophy & Action
-              </h3>
               <p className="text-xl sm:text-2xl font-light leading-relaxed tracking-tight" style={{ color: colors.c02 }}>
                 Our solutions are designed with one core belief—technology should empower people, improve
                 decision-making, and drive business success. From enterprise software
@@ -208,26 +210,13 @@ export default function FutureBotsHome() {
             </div>
 
             <div className="relative z-10 space-y-6">
-              <h3 className="text-xs font-bold tracking-widest uppercase" style={{ color: colors.c04 }}>
-                Strategic Scalability
-              </h3>
               <p className="text-lg sm:text-xl font-normal leading-relaxed opacity-95">
                 Whether you're a startup, SME, enterprise, or public sector organization, FutureBots partners
                 with you to build intelligent digital ecosystems that improve productivity,
                 streamline operations, and unlock new opportunities for innovation.
               </p>
             </div>
-
-            <div className="relative z-10 flex items-center justify-between pt-8 border-t" style={{ borderColor: `${colors.c01}30` }}>
-              <span className="text-sm font-semibold tracking-wider uppercase" style={{ color: colors.c04 }}>
-                Ready Ecosystems
-              </span>
-              <svg className="w-5 h-5 transition-transform duration-300 transform translate-x-0 group-hover:translate-x-2" fill="none" stroke={colors.c04} strokeWidth="2" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </div>
           </motion.div>
-
         </div>
       </section>
     </main>

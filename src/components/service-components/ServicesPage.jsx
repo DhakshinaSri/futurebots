@@ -147,9 +147,6 @@ export default function ServicesPage() {
           
           {/* Sticky Left Pillar Block */}
           <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-12">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: colors.planetary }}>
-              Strategic Distinction
-            </span>
             <h2 className="text-4xl font-extrabold tracking-tight leading-tight" style={{ color: colors.galaxy }}>
               WHY CHOOSE <br />FUTUREBOTS
             </h2>
@@ -159,7 +156,7 @@ export default function ServicesPage() {
               <h3 className="text-lg font-bold" style={{ color: colors.galaxy }}>
                 Your Trusted Technology Partner
               </h3>
-              <p className="text-sm leading-relaxed opacity-90" style={{ color: colors.galaxy }}>
+              <p className="text-base leading-relaxed opacity-90" style={{ color: colors.galaxy }}>
                 At FutureBots, we understand that every organization has unique goals, challenges, and opportunities. Our client-centric approach ensures every solution is tailored to your business requirements while delivering measurable value.
               </p>
             </div>
@@ -212,7 +209,7 @@ export default function ServicesPage() {
                 <h4 className="text-lg font-bold mb-3" style={{ color: colors.galaxy }}>
                   {value.title}
                 </h4>
-                <p className="text-sm leading-relaxed opacity-80" style={{ color: colors.galaxy }}>
+                <p className="text-base leading-relaxed opacity-80" style={{ color: colors.galaxy }}>
                   {value.desc}
                 </p>
               </motion.div>
@@ -232,9 +229,6 @@ export default function ServicesPage() {
           className="space-y-12"
         >
           <div className="text-center space-y-4">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: colors.planetary }}>
-              Broad Horizon
-            </span>
             <h2 className="text-4xl font-extrabold tracking-tight" style={{ color: colors.galaxy }}>
               INDUSTRIES WE SERVE
             </h2>
@@ -267,9 +261,6 @@ export default function ServicesPage() {
       <section className="py-24 px-6 sm:px-12 lg:px-24 bg-white border-t border-stone-200/50">
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="space-y-4">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: colors.planetary }}>
-              Execution Lifecycle
-            </span>
             <h2 className="text-4xl font-extrabold tracking-tight" style={{ color: colors.galaxy }}>
               OUR PROCESS
             </h2>
@@ -290,7 +281,7 @@ export default function ServicesPage() {
                 <div className="flex items-center justify-between">
                   {/* Process Indicator */}
                   <div className="w-10 h-10 rounded-full font-mono text-sm font-bold flex items-center justify-center text-white" style={{ backgroundColor: colors.galaxy }}>
-                    0{index + 1}
+                    {index + 1}
                   </div>
                   {/* Connection Track Segment (Hidden on mobile) */}
                   {index < 5 && (
@@ -302,7 +293,7 @@ export default function ServicesPage() {
                   <h4 className="font-extrabold text-lg" style={{ color: colors.galaxy }}>
                     {step.title}
                   </h4>
-                  <p className="text-xs leading-relaxed opacity-80" style={{ color: colors.galaxy }}>
+                  <p className="text-base leading-relaxed opacity-80" style={{ color: colors.galaxy }}>
                     {step.text}
                   </p>
                 </div>
