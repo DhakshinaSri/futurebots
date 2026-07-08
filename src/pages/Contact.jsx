@@ -1,7 +1,9 @@
+import ContactUsPage from "@/components/contact-components/ContactUsPage";
+
 export default function Contact() {
   return (
-    <div className="pt-20">
-        <h1 className="text-4xl font-bold mb-4 text-center">Welcome to FutureBots</h1>
+    <div className="pt-18">
+      <ContactUsPage />
     </div>
   );
 }
