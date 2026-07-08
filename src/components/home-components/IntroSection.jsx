@@ -99,8 +99,8 @@ export default function IntroSection() {
             className="p-8 rounded-[2rem] bg-white border border-stone-200/60 shadow-lg flex flex-col justify-between group transition-colors duration-300"
           >
             <div className="space-y-6">
-              <span className="font-mono text-xs font-bold opacity-60 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r" style={{ color: colors.c02, backgroundImage: `linear-gradient(to right, ${colors.c05}, ${colors.c01})` }}>
-                01 / THE IDENTITY
+              <span className="font-mono text-xs font-bold opacity-60" style={{ color: colors.c02 }}>
+                THE IDENTITY
               </span>
               <p className="text-base leading-relaxed font-normal" style={{ color: colors.c02 }}>
                 FutureBots is more than a technology company—we are a strategic innovation partner helping organizations transform ideas into impactful digital solutions.
@@ -119,8 +119,8 @@ export default function IntroSection() {
             className="p-8 rounded-[2rem] bg-white border border-stone-200/60 shadow-lg flex flex-col justify-between group transition-colors duration-300"
           >
             <div className="space-y-6">
-              <span className="font-mono text-xs font-bold opacity-60 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r" style={{ color: colors.c02, backgroundImage: `linear-gradient(to right, ${colors.c05}, ${colors.c01})` }}>
-                02 / THE METHODOLOGY
+              <span className="font-mono text-xs font-bold opacity-60" style={{ color: colors.c02 }}>
+                THE METHODOLOGY
               </span>
               <p className="text-base leading-relaxed font-normal" style={{ color: colors.c02 }}>
                 By combining business consulting, software engineering, cloud technologies, intelligent automation, and data-driven insights, we help organizations overcome operational challenges and achieve long-term business excellence.
@@ -139,8 +139,8 @@ export default function IntroSection() {
             className="p-8 rounded-[2rem] bg-white border border-stone-200/60 shadow-lg flex flex-col justify-between group transition-colors duration-300"
           >
             <div className="space-y-6">
-              <span className="font-mono text-xs font-bold opacity-60 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r" style={{ color: colors.c02, backgroundImage: `linear-gradient(to right, ${colors.c05}, ${colors.c01})` }}>
-                03 / THE PROMISE
+              <span className="font-mono text-xs font-bold opacity-60" style={{ color: colors.c02 }}>
+                THE PROMISE
               </span>
               <p className="text-base leading-relaxed font-normal" style={{ color: colors.c02 }}>
                 Every solution we create is tailored to our clients' unique business goals, ensuring measurable outcomes and lasting value.

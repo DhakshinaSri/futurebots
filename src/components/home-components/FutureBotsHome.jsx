@@ -177,7 +177,7 @@ export default function FutureBotsHome() {
             style={{ borderColor: `${colors.c01}30` }}
           >
             <div className="space-y-6">
-              <p className="text-xl sm:text-2xl font-light leading-relaxed tracking-tight" style={{ color: colors.c02 }}>
+              <p className="text-lg sm:text-xl font-light leading-relaxed tracking-tight" style={{ color: colors.c02 }}>
                 Our solutions are designed with one core belief—technology should empower people, improve
                 decision-making, and drive business success. From enterprise software
                 development and intelligent automation to cloud transformation, cybersecurity,
